@@ -37,7 +37,7 @@ const Main: React.FC = () => {
   ];
   return (
     <main className="bg-white w-full h-[85rem]">
-      <div className="mt-[7.67rem]">
+      <div className="mt-[5.67rem]">
         <h2
           className="text-[#68300D] text-[3rem] text-center"
           style={{
@@ -46,7 +46,7 @@ const Main: React.FC = () => {
         >
           Activate their inner skills
         </h2>
-        <div className="grid-cols-1 space-y-[3.5rem] pt-[5rem] pb-[4.] ">
+        <div className="grid-cols-1 space-y-[4rem] pt-[5rem] pb-[4.] ">
           {items.map((skill, index) => (
             <div key={skill.id}>
               <aside className="flex justify-center gap-[9rem] max-w-[55rem] mx-auto">
