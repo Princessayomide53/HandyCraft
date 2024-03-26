@@ -3,6 +3,7 @@ import Image from "next/image";
 import item1 from "../../../../public/Assets/item1.png";
 import item2 from "../../../../public/Assets/item2.png";
 import item3 from "../../../../public/Assets/item3.png";
+import vector from "../../../../public/Assets/vector.png";
 
 const Main: React.FC = () => {
   type Skills = {
@@ -38,14 +39,24 @@ const Main: React.FC = () => {
   return (
     <main className="bg-white w-full h-[85rem]">
       <div className="mt-[5.67rem]">
-        <h2
-          className="text-[#68300D] text-[3rem] text-center"
-          style={{
-            fontFamily: "MapleMono",
-          }}
-        >
-          Activate their inner skills
-        </h2>
+        <div className="relative pb-[5rem]">
+          <h2
+            className="text-[#68300D] text-[3rem] text-center absolute  z-20 inset-0"
+            style={{
+              fontFamily: "MapleMono",
+            }}
+          >
+            Activate their inner skills
+          </h2>
+          <Image
+            className="w-[19.02544rem] h-[2.53519rem] absolute left-[46.5rem] top-[1.1rem]"
+            src={vector}
+            alt="vector"
+            //   width={52}
+            //   height={20}
+            priority
+          />
+        </div>
         <div className="grid-cols-1 space-y-[4rem] pt-[5rem] pb-[4.] ">
           {items.map((skill, index) => (
             <div key={skill.id}>

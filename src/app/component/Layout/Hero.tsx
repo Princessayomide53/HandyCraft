@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
               //   height={20}
               priority
             />
-            <p className="pt-[1.12rem] text-[#68300D] text-[1.5rem] font-medium leading-[2.2875rem]">
+            <p className="pt-[1.12rem] text-[#68300D] text-[1.5rem] font-medium leading-[2.1875rem]">
               We're passionate about inspiring young
               <br /> minds to explore the wonders of STEM <br />
               (Science, Technology, Engineering, and
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
           </div>
           <div>
             <Image
-              className="w-[37.125rem] h-[37.375rem]"
+              className="w-[37.125rem] h-[37.775rem]"
               src={hero}
               alt="Logo"
               //   width={52}
