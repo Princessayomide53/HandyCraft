@@ -1,11 +1,17 @@
 // import Image from "next/image";
 
-import HomePage from "./component/HomePage";
+import About from '@/components/UI/Home/About';
+import Hero from '@/components/UI/Home/Hero';
+import Nav from '@/components/UI/Home/Nav';
+
+// import HomePage from './component/HomePage';
 
 export default function Home() {
   return (
     <main>
-      <HomePage />
+      <Nav />
+      <Hero />
+      <About />
     </main>
   );
 }

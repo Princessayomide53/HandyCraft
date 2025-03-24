@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/fonts/fonts/Maple-black.ttf') format('truetype'),
+    url('/fonts/fonts/MapleMono-Light.ttf') format('truetype'),
+    url('/fonts/fonts/MapleMono-Regular-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font {
+  font-family: 'MyCustomFont', sans-serif;
+}
