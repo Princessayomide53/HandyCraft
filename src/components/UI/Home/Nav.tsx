@@ -6,7 +6,7 @@ type Props = {};
 
 const Nav = () => {
   return (
-    <nav className='px-6 items-center flex justify-between p-6 shadow-md'>
+    <nav className='px-6 items-center flex justify-between p-4 shadow-md'>
       <Image src={Logo} width={150} height={150} alt='logo' />
       <div className=''>
         <ul className='flex space-x-[4rem] leading-normal text-[#032D55]  text-lg font-medium'>
@@ -18,7 +18,7 @@ const Nav = () => {
         </ul>
       </div>
       <div>
-        <div className='flex items-center gap-10 border-[#032D55] px-7 py-2 border-l-2'>
+        <div className='flex items-center gap-10 border-[#032D55] px-7 py-1.5 border-l-2'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='21'
