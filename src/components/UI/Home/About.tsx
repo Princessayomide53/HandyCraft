@@ -2,30 +2,48 @@ import Image from 'next/image';
 import React from 'react';
 import about from '../../../../public/Assets/about.svg';
 import CustomButton from '@/components/Common/CustomButton';
+import card1 from '../../../../public/Assets/card1.png';
+import card2 from '../../../../public/Assets/card2.png';
+import card3 from '../../../../public/Assets/card3.png';
+import card4 from '../../../../public/Assets/card4.png';
 
 type Props = {};
 
 const cards = [
-  {id: 1,img: },
+  { id: 1, img: card1 },
   {
     id: 2,
     title: 'Support for Aviation Students',
     description:
       'We support students in aviation and connect them with the necessary tools for academic accomplishment and career development.   ',
   },
-  {id: 1,img: },
+  { id: 3, img: card2 },
   {
     id: 4,
     title: 'Bridging the Workforce Gap',
     description:
       'We are working to bridge the workforce gap and curb the personnel shortage in aviation by attempting to boost student completion rate in FAA training schools.',
   },
+  {
+    id: 5,
+    title: 'Inspiring the younger generation',
+    description:
+      'We strive to increase student completion rates in FAA training schools and implement engagement strategies for K-12 students, inspiring the younger generation to pursue careers in aviation and STEM fields.',
+  },
+  { id: 6, img: card3 },
+  {
+    id: 7,
+    title: 'Ensuring Eligible Workforce Candidate',
+    description:
+      'Consequently, we are ensuring a continuous flow of eligible candidates in the workforce pipeline, to meet the rising demands of an expanding industry.',
+  },
+  { id: 8, img: card4 },
 ];
 
 const About = (props: Props) => {
   return (
-    <main className='px-6 py-24 '>
-      <div className='flex justify-between'>
+    <main className='mt-24 '>
+      <div className='px-6 flex justify-between'>
         <div>
           <h1 className='text-[#032D55] font text-[2.25rem] font-bold leading-normal'>
             Get to know Davidson Initiative
@@ -50,7 +68,45 @@ const About = (props: Props) => {
         </div>
         <Image src={about} alt='about' />
       </div>
-      <div></div>
+      <div className=' grid grid-cols-4 gap-5 place-items-center gap-y-[1.6rem] mt-[5rem]'>
+        {cards.map((card, index) =>
+          card.img ? (
+            <Image
+              key={index}
+              src={card.img}
+              alt='Card Image'
+              className='w-[18.75rem] h-[18.75rem]'
+            />
+          ) : (
+            <div
+              key={index}
+              className={`w-[18.75rem] h-[18.75rem] 
+                ${index === 1 ? 'bg-[#E25559]' : ''}
+                 ${index === 3 ? 'bg-[#B3EA7B]' : ''} 
+                ${index === 4 ? 'bg-[#D756ED]' : ''} ${
+                index === 6 ? 'bg-[#56FFFF]' : ''
+              } rounded-2xl ${index === 4 ? 'py-[0.867rem]' : ''} ${
+                index === 6 ? 'py-[1rem]' : ''
+              }  py-[2.28rem] px-[1.75rem]`}
+            >
+              <h2
+                className={`${
+                  index === 6 ? 'text-[#1F6474]' : 'text-white'
+                } font text-[1.3rem] font-bold leading-normal`}
+              >
+                {card.title}
+              </h2>
+              <p
+                className={` ${
+                  index === 6 ? 'text-[#1F6474]' : 'text-white'
+                } pt-[1rem] text-base font-normal leading-normal`}
+              >
+                {card.description}
+              </p>
+            </div>
+          )
+        )}
+      </div>
     </main>
   );
 };
