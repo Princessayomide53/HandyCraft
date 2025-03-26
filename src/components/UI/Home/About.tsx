@@ -6,6 +6,7 @@ import card1 from '../../../../public/Assets/card1.png';
 import card2 from '../../../../public/Assets/card2.png';
 import card3 from '../../../../public/Assets/card3.png';
 import card4 from '../../../../public/Assets/card4.png';
+import wallpaper2 from '../../../../public/Assets/wallpaper2.svg';
 
 type Props = {};
 
@@ -68,7 +69,7 @@ const About = (props: Props) => {
         </div>
         <Image src={about} alt='about' />
       </div>
-      <div className=' grid grid-cols-4 gap-5 place-items-center gap-y-[1.6rem] mt-[5rem]'>
+      <div className=' grid grid-cols-4 relative z-20 gap-5 place-items-center gap-y-[1.6rem] mt-[5rem]'>
         {cards.map((card, index) =>
           card.img ? (
             <Image
@@ -85,7 +86,7 @@ const About = (props: Props) => {
                  ${index === 3 ? 'bg-[#B3EA7B]' : ''} 
                 ${index === 4 ? 'bg-[#D756ED]' : ''} ${
                 index === 6 ? 'bg-[#56FFFF]' : ''
-              } rounded-2xl ${index === 4 ? 'py-[0.867rem]' : ''} ${
+              } rounded-2xl ${index === 4 ? 'py-[0.767rem]' : ''} ${
                 index === 6 ? 'py-[1rem]' : ''
               }  py-[2.28rem] px-[1.75rem]`}
             >
@@ -107,6 +108,11 @@ const About = (props: Props) => {
           )
         )}
       </div>
+      <Image
+        src={wallpaper2}
+        alt='bg2'
+        className='object-contain ml-auto -mt-10 -z-10'
+      />
     </main>
   );
 };

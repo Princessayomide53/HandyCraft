@@ -13,7 +13,7 @@ const CustomButton: React.FC<Props> = ({
 }: Props) => {
   return (
     <button
-      className={`mt-[2rem] px-[5rem] py-[1rem] leading-normal bg-white text-[#032D55] text-lg rounded-md font-bold ${customStyles}`}
+      className={`mt-[2rem] px-[5rem] py-[1rem] leading-normal text-[#032D55] text-lg rounded-md font-bold ${customStyles}`}
       //   onClick={onClick}
     >
       {text}

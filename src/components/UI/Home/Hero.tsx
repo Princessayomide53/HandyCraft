@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import bg from '../../../../public/Assets/bg.svg';
 import hero from '../../../../public/Assets/hero.png';
+import CustomButton from '@/components/Common/CustomButton';
 
 const Hero = () => {
   return (
@@ -17,7 +18,7 @@ const Hero = () => {
       <div className='relative z-10 w-full'>
         {/* Left: Text Section */}
         <div className='absolute inset-0 py-[12rem] flex flex-col items-start justify-start text-left z-20 px-6'>
-          <h1 className='text-[#032D55] text-[3.75rem] font-bold leading-[4rem]'>
+          <h1 className='text-[#032D55] font text-[3.75rem] font-bold leading-[4rem]'>
             Bridging the Gap,
             <br /> Building the Future
           </h1>
@@ -26,9 +27,10 @@ const Hero = () => {
             Building the next generation of aviation <br />
             professionals through student engagement.
           </p>
-          <button className='mt-[2rem] px-[5rem] py-[1rem] leading-normal bg-white text-[#032D55] text-lg rounded-md font-bold'>
-            Learn More
-          </button>
+          <CustomButton
+            text='Learn more'
+            customStyles='bg-white font-semibold'
+          />
         </div>
 
         {/* Right: Hero Image */}
