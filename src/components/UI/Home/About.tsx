@@ -7,6 +7,7 @@ import card2 from '../../../../public/Assets/card2.png';
 import card3 from '../../../../public/Assets/card3.png';
 import card4 from '../../../../public/Assets/card4.png';
 import wallpaper2 from '../../../../public/Assets/wallpaper2.svg';
+import wallpaper from '../../../../public/Assets/wallpaper.png';
 
 type Props = {};
 
@@ -44,7 +45,7 @@ const cards = [
 const About = (props: Props) => {
   return (
     <main className='mt-24 '>
-      <div className='px-6 flex justify-between'>
+      <div className='px-8 flex justify-between'>
         <div>
           <h1 className='text-[#032D55] font text-[2.25rem] font-bold leading-normal'>
             Get to know Davidson Initiative
@@ -69,7 +70,15 @@ const About = (props: Props) => {
         </div>
         <Image src={about} alt='about' />
       </div>
-      <div className=' grid grid-cols-4 relative z-20 gap-5 place-items-center gap-y-[1.6rem] mt-[5rem]'>
+      <div className='relative'>
+        <Image
+          src={wallpaper}
+          alt='wallpaper'
+          className='object-contain w-[15.5rem] absolute inset-0 mr-auto -mt-[7rem] -z-10'
+        />
+      </div>
+
+      <div className=' grid grid-cols-4 relative z-20 px-2 place-items-center gap-y-[1.6rem] mt-[7rem]'>
         {cards.map((card, index) =>
           card.img ? (
             <Image
@@ -110,8 +119,8 @@ const About = (props: Props) => {
       </div>
       <Image
         src={wallpaper2}
-        alt='bg2'
-        className='object-contain ml-auto -mt-10 -z-10'
+        alt='wallpaper2'
+        className='object-contain w-[17.5rem] ml-auto -mt-[13rem] -z-10'
       />
     </main>
   );

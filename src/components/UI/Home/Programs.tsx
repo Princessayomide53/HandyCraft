@@ -31,21 +31,21 @@ const Programs = (props: Props) => {
   ];
   return (
     <section>
-      <div className='relative w-full'>
+      <div className='relative w-full -mt-[24rem]'>
         <Image
           src={bg2}
           alt='bg2'
-          className='w-full object-cover -mt-16 absolute inset-0 -z-10'
+          className='w-full object-cover absolute inset-0 -z-10'
         />
 
         <p
-          className=' text-[#140111] pt-32 text-center font-bold leading-normal
+          className=' text-[#140111] pt-[12rem] text-center font-bold leading-normal
         fonts text-4xl '
         >
           Programs
         </p>
 
-        <div className='flex px-8 justify-between mt-[5rem]'>
+        <div className='flex px-10 justify-between mt-[4rem]'>
           {program.map((item) => (
             <div key={item.id} className='relative'>
               <Image
