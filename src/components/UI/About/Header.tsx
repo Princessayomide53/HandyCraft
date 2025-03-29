@@ -15,8 +15,7 @@ const Header = ({ text }: Props) => {
         className='object-cover h-auto w-full'
       />
 
-      <h1 className=' font-bold flex justify-center items-center text-white font text-[3.75rem] absolute inset-0'>
-        {' '}
+      <h1 className=' font-bold flex justify-center items-center text-white text-[3.75rem] absolute inset-0'>
         {text}
       </h1>
     </header>

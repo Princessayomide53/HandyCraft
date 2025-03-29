@@ -37,7 +37,7 @@ const Team = (props: Props) => {
     },
   ];
   return (
-    <section className='mt-[1.88rem] px-8'>
+    <section className='mt-[1.88rem] mb-[5rem] px-8'>
       <Image src={cloud2} alt='cloud-image' className=' object-contain ' />
       <Image
         src={cloud}
@@ -45,18 +45,17 @@ const Team = (props: Props) => {
         className=' object-contain ml-auto'
       />
 
-      <h3 className='text-[#032D55] text-center -mt-7 font-bold leading-normal font text-4xl'>
+      <h3 className='text-[#032D55] text-center -mt-12  font-bold leading-normal font text-4xl'>
         Our Team
       </h3>
-      <div className='flex justify-around'>
+      <div className='flex justify-around mt-[3.28rem]'>
         {team.map((items) => (
           <div key={items.id} className='flex flex-col'>
             <Image src={items.img} alt='teams-image' />
             <h4 className='text-center pt-[1.56rem] font-normal leading-normal text-[#032D55] text-xl'>
               {items.title}
             </h4>
-            color: #032D55; font-family: Poppins; font-size: 0.84375rem;
-            font-style: normal; font-weight: 400; line-height: normal;
+
             <p className='text-center font-normal leading-normal text-[#032D55] text-sm'>
               {items.text}
             </p>
