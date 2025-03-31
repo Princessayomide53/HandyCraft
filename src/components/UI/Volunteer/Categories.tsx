@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 import Volunteer from '../../../../public/Assets/Volunteer.svg';
+import Volunteer2 from '../../../../public/Assets/volunteer2.svg';
+import CustomButton from '@/components/Common/CustomButton';
 
 type Props = {};
 
@@ -16,7 +18,7 @@ const Categories = (props: Props) => {
       id: 2,
       title: 'Technical Operator',
       text: 'Technical operators deal with program development and the technicalities of event coverage such as photography, scriptwriting, videography, article writing, digital media management, among others. Membership is needed to become a Technical Operator. The Davidson Initiative hosts a variety of aerospace and STEM programs/events involving drones, airplanes, robotics, coding, 3D Modeling, among others. Suitable for STEM-oriented individuals and digital content creators or individuals who are passionate about learning these skills.',
-      img: Volunteer,
+      img: Volunteer2,
     },
     {
       id: 3,
@@ -26,7 +28,7 @@ const Categories = (props: Props) => {
     },
   ];
   return (
-    <section className='mt-[5.25rem] relative'>
+    <section className='mt-[5.25rem] mb-[12rem] h-full relative'>
       <p className='w-[66.5rem] mx-auto text-[#032D55] leading-normal font-normal'>
         We achieve mission success through excellence, innovation, and faithful
         service. Whatever your passion is, we’ll give you a platform to express
@@ -52,19 +54,52 @@ const Categories = (props: Props) => {
         <p className='text-[#032D55] text-center font-bold leading-normal text-4xl '>
           Volunteer Categories
         </p>
-        {volunteer.map((vol) => (
-          <div key={vol.id} className='relative mt-[5.25rem] mr-[16rem] '>
-            <Image src={vol.img} alt='Volunteer' layout='intrinsic' />
+        {volunteer.map((vol, index) => (
+          <div key={index} className='relative mt-[5.25rem] mr-[16rem]'>
+            {/* <div className='relative'> */}
+            <Image
+              src={vol.img}
+              alt='Volunteer'
+              layout='intrinsic'
+              className={`${index === 1 ? 'ml-[20rem]' : ''}`}
+            />
+            {/* </div> */}
             <div
-              className='bg-[#D1FFA3] absolute left-[18rem] top-16 w-[35rem] h-[23.5625rem] rounded-3xl py-[4.81rem] pl-24
-            '
+              className={` absolute top-16 ${
+                index === 0
+                  ? 'py-[4.81rem] pl-24 bg-[#D1FFA3] h-[23.5625rem] left-[18rem]'
+                  : ''
+              } w-[35rem] ${
+                index === 1
+                  ? 'h-[29.75rem] -z-10 bg-[#BDFFFF] pl-[4.19rem] py-[3.5rem] absolute right-[15rem]'
+                  : ''
+              } ${
+                index === 2
+                  ? 'h-[35.875rem] bg-[#FFF8B4] -z-10 pl-[4.68rem] py-[3.5rem] left-[18rem] mt-10'
+                  : ''
+              }  rounded-3xl 
+            `}
             >
-              <h5 className='text-[#032D55] text-2xl leading-normal font-normal'>
+              <h5 className='text-[#032D55] text-2xl leading-normal font-bold'>
                 {vol.title}
               </h5>
-              <p className='text-[#032D55] pt-3 w-[23rem] text-base leading-normal font-normal'>
+              <p
+                className={`text-[#032D55] pt-3 w-[23rem] ${
+                  index === 2 ? 'w-[26rem]' : ''
+                } text-base leading-normal font-normal`}
+              >
                 {vol.text}
               </p>
+              <CustomButton
+                customStyles={`border-2 border-[#032D55] rounded-[0.9375rem] mt-[6rem] ${
+                  index === 1 ? 'mr-5 px-9' : ''
+                }  ${index === 0 ? ' px-24' : ''} ${
+                  index === 2 ? 'px-24' : ''
+                }`}
+                text={`${index === 0 ? 'Become a facilitator' : ''} ${
+                  index === 1 ? 'Become a Technical Operator' : ''
+                } ${index === 2 ? 'Become an Officer' : ''}`}
+              />
             </div>
           </div>
         ))}
