@@ -160,7 +160,7 @@ const Contact = (props: Props) => {
         </div>
         <CustomButton
           text='Send message'
-          customStyles='mt-[3rem] w-[14.4375rem] bg-[#80F2FF] rounded-xl'
+          customStyles='mt-[3rem] w-[14.4375rem] rounded-md bg-[#80F2FF] rounded-xl'
         />
       </article>
     </section>

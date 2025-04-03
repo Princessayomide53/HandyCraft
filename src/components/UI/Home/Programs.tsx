@@ -70,7 +70,7 @@ const Programs = (props: Props) => {
         <div className='flex justify-center mt-12'>
           <CustomButton
             text='View all programs'
-            customStyles='bg-[#80F2FF] font-semibold'
+            customStyles='bg-[#80F2FF] rounded-md font-semibold px-[4rem]'
           />
         </div>
       </div>

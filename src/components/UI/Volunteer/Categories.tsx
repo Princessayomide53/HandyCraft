@@ -91,7 +91,7 @@ const Categories = (props: Props) => {
                 {vol.text}
               </p>
               <CustomButton
-                customStyles={`border-2 border-[#032D55] rounded-[0.9375rem] mt-[6rem] ${
+                customStyles={`border-2 border-[#032D55] px-[4rem] rounded-[0.9375rem] mt-[6rem] ${
                   index === 1 ? 'mr-5 px-9' : ''
                 }  ${index === 0 ? ' px-24' : ''} ${
                   index === 2 ? 'px-24' : ''

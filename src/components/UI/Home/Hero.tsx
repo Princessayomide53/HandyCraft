@@ -29,7 +29,7 @@ const Hero = () => {
           </p>
           <CustomButton
             text='Learn more'
-            customStyles='bg-white font-semibold'
+            customStyles='bg-white rounded-md font-semibold px-[4rem]'
           />
         </div>
 

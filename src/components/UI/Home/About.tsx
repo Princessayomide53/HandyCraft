@@ -65,7 +65,7 @@ const About = (props: Props) => {
 
           <CustomButton
             text='Learn more'
-            customStyles='bg-[#80F2FF] font-semibold'
+            customStyles='bg-[#80F2FF] rounded-md px-[4rem] font-semibold'
           />
         </div>
         <Image src={about} alt='about' />
@@ -95,7 +95,7 @@ const About = (props: Props) => {
                  ${index === 3 ? 'bg-[#B3EA7B]' : ''} 
                 ${index === 4 ? 'bg-[#D756ED]' : ''} ${
                 index === 6 ? 'bg-[#56FFFF]' : ''
-              } rounded-2xl ${index === 4 ? 'py-[0.767rem]' : ''} ${
+              } rounded-2xl ${index === 4 ? 'py-[0.667rem]' : ''} ${
                 index === 6 ? 'py-[1rem]' : ''
               }  py-[2.28rem] px-[1.75rem]`}
             >
